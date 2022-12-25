@@ -1,0 +1,40 @@
+.form{
+    padding: 5%;
+    background-color: white;
+    border-radius: 3%;
+}
+
+.form h1{
+    color: blue; 
+    font-size: 40px; 
+    text-align: center
+    !important
+}
+
+form{
+    color: black;
+    padding: 5%;
+    border: 2px solid rgb(211, 204, 204);
+    border-radius: 3%;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.form{
+    margin-top: 8%;
+    
+}
+
+/* .footer-bg{
+    
+    background-color: white;
+} */
+
+
+.form-btn{
+    margin-top: 5%;
+}
+
+
+       
+

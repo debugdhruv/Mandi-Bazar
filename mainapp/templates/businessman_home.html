@@ -1,0 +1,384 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Businessman Home</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    {% load static %}
+
+    <h3>Welcome in Businessman Home</h3>
+    <h3>{{email}}</h3> <br><br><br>
+
+    <div class="card" style="width: 14rem;">
+        <div class="card-body">
+        <a href="{% url 'bidding_products' product='wheat' %}" class="card-link">wheat</a>
+        </div>
+    </div>
+    <div class="card" style="width: 14rem;">
+        <div class="card-body">
+        <a href="{% url 'bidding_products' product='soyabeen' %}" class="card-link">soyabeen</a>
+        </div>
+    </div>
+
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bussinessman: Home</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1-SynsFtan0_5WRnMXOGaMMMYGX-4qnUo"> -->
+  
+    {% load static %}
+    
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bussinessman-home.css'%}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/footer.css'%}">
+
+
+    <style>
+      .MagicScroll span a{
+        display: none
+        !important;
+      }
+      
+    </style>
+
+    <!-- magic Scroll -->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/magicscroll.css'%}">
+    <script type="text/javascript" src="{% static '/JS/magicscroll.js'%}"></script> 
+
+
+  </head>
+  <body>
+    <div class="intro" style="height: 78px; background-image: none; background-color: blue;">
+      <header id="header">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div style="min-width: 160px;">
+            <a class="navbar-brand" href="#"><img id="navlogo" src="{% static '/Images/logo.png' %}"
+              /></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink1"  href="#wheat" style="color: white;">Buy Grains</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink2"  href="{% url 'transaction_history' %}" style="color: white;">Transaction History</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink3"  href="{% url 'farmer_analytics' %}" style="color: white;">Analytics</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink4"  href="{% url 'contact_us' %}" style="color: white;">Contact us</a>
+              </li>
+              
+          </ul>
+    
+            <div class="d-flex" style="min-width: 400px; text-decoration: none; list-style: none;">
+              <li class="dropdown">
+                <div href="#" class="dropbtn nav-link" style="color: white;">
+                  <a href="{% url 'businessman_complete_profile' %}"> <button
+              id="btn btn-light btn-ls signup-btn"
+              class="btn btn-danger btn-outline-success "
+              data-bs-toggle="modal"
+              style="font-size: 18px;font-weight: bold; margin-left: -20px; color: white;">
+              Complete Profile
+                  </button></a>
+              </div>
+              </li>
+          </div>
+          </div>
+        </nav>
+      </div>
+      </header>
+    
+          <!-- Profile Completion -->
+          {% comment %} <div class="modal fade" data-bs-backdrop="static" id="farmer-profile">
+            <div class="modal-dialog" style="max-width: 600px;">
+              <div class="modal-content" >
+                <div>
+                  <button class="btn-close float-end p-3" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="text-center">
+                    <h4 style="font-size: 40px;">Profile Completion</h4>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <form class="p-3">
+                      <div class="form-group">
+                        <label class="form-label" for="aadhar" style="font-weight: bold;">Aadhar Number</label>
+                        <input type="text" class="form-control" maxlength="12" minlength="12" id="aadhar" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="pan-card" style="font-weight: bold;">Pan Card Number</label>
+                        <input type="text" class="form-control" id="pan-card" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="address" style="font-weight: bold;">Address</label>
+                        <input type="text" class="form-control" id="adddress" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="bank" style="font-weight: bold;">Bank Account Number</label>
+                        <input type="text" class="form-control" id="bank" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="account-holder" style="font-weight: bold;">Account hoder name</label>
+                        <input type="text" class="form-control" id="account-holde" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label" for="password1" style="font-weight: bold;">IFSC Code</label>
+                        <input type="text" minlength="11" maxlength="11" class="form-control" id="password1" required>
+                      </div>
+                      <div class="form-btn w-100">
+                        <button type="submit button" value="Login" class="btn btn-success btn-lg w-75 btn-block">Complete</button>
+                      </div>
+                    </form>
+                    
+                    <!-- <div class="text-center text-muted delimiter">or use a social network</div>
+                    <div class="d-flex justify-content-center social-buttons">
+                      <button type="button" class="btn btn-secondary btn-round me-1" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary btn-round me-1" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary btn-round me-1" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                      </button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+                <!-- <div class="modal-footer d-flex justify-content-center">
+                  <div >Not a member yet? Sign Up.</div>
+                </div> -->
+              </div>
+          </div> {% endcomment %}
+    </div>
+
+
+    <main >
+
+      <div id="banners" class="carousel slide carousel-fade" data-bs-ride="carousel" style="z-index: -1;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://source.unsplash.com/random/1080x370/?farm" alt="" class="d-block w-100" >
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://source.unsplash.com/random/1080x370/?harvest" alt="" class="d-block w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://source.unsplash.com/random/1080x370/?farmer" alt="" class="d-block w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="{% static '/Images/banners/banner6.jpg'%}" alt="" class="d-block w-100" width="1080px" height="627px">
+            </div>
+        </div>
+
+        <div class="carousel-control-prev" type="button" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </div>
+        <div class="carousel-control-next" type="button" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </div>
+      </div>
+
+      <!-- bidding bashboard -->
+
+      <div class="mt-5 bidding-board rounded" id="wheat">
+        <h1>Products For Bidding</h1>
+          <div class="options row flex">
+            <a style="text-decoration: none;" href="{% url 'products_list' product='wheat' %}" >
+              <div class="option-box">
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/wheats.jpg);" >
+                  <p>Wheat (Gehu)</p>
+                </div>
+              </a>
+            </div>
+            
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='soyabean' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/soyabeans.jpg);">
+                  <p>Soybean (Soyabean)</p>
+                </div>
+                </a>
+              </div>
+              
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='garlic' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/gralics.webp);">
+                  <p>Garlic (Lahsun)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='onion' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/onions.jpg);">
+                  <p>Onion (Pyaaj)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='chickpeas' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/chana.webp);">
+                  <p>chickpeas (Chana)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='mustord' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/mustard.jpg);">
+                  <p>Mustord (Rai)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='peanut' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/peanuts.jpg);" >
+                  <p>Peanuts (Mungfali)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='flax' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/alsi.webp);" >
+                  <p>Flax (Alsi)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='fenugreek' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/methi.webp);" >
+                  <p>Fenugreek (Methi)i</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='fennel' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/kalongi.jpg);" >
+                  <p>Fennel (Kalongi)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='sesame' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/til.jpg);" >
+                  <p>Sesame (Til)</p>
+                </div>
+                </a>
+              </div>
+              <div class="option-box">
+                <a style="text-decoration: none;" href="{% url 'products_list' product='mung bean' %}" >
+                <div class="col-3 bid-option option" style="background-image: url(/static/Images/Bidding-img/moong.jpg);" >
+                  <p>Mung bean (Mung)</p>
+                </div>
+                </a>
+              </div>
+          </div>
+      </div>
+    </main>
+    
+    <div style="background-color:white; height:10px">
+
+    </div>
+    <!-- footer -->
+    <div class="footer footer-bg">
+      <footer class="container">
+        <div class="row row-1st">
+          <div class="col-sm">
+            <!-- <a class="navbar-brand" href="/Templates/index.html"><img style="width: 100px; height: 50px;" id="navlogo" src="../Images/logo.png"/></a> -->
+            <h6>Address</h6>
+            <div class="short-intro">
+              <p>MOG Lines, <br>Shri Vaishnav Polytechnic College Campus</p>
+            </div>
+            
+            <div class="icons">
+              <i class="bi bi-facebook social-icons" style="margin-left: 0"></i>
+              <i class="bi bi-instagram social-icons"></i>
+              <i class="bi bi-twitter social-icons"></i>
+              <i class="bi bi-youtube social-icons"></i>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Let's Become Better Together</h6>
+            <div class="short-intro">
+              <b>Learn. Innovate. Inspire</b><br>
+              <p>A Powerfull step towards Digital Farming by using "Mandi Bazar'</p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Quick Pages</h6>
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'our_company' %}">Our Company</a></li>
+              <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              <li><a href="{% url 'disclaimer' %}">Disclaimer</a></li>
+              <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Services</h6>
+            <ul>
+              <li><a href="{% url 'pricing' %}">Pricing</a></li>
+              <li><a href="{% url 'market_rates' %}">Market rates</a></li>
+              <li><a href="{% url 'farmer_analytics' %}">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Referral Sites</h6>
+            <ul>
+              <li><a href="https://www.krishinetwork.com/" target='blank'>Krishi Network</a></li>
+              <li><a href="http://agriretailers.com/" target='blank'>Agri Retailer</a></li>
+              <li><a href="https://farmer.gov.in/" target='blank'>Farmer's Portal</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{% static '/JS/index.js' %}"></script>
+  </body>
+  </html>

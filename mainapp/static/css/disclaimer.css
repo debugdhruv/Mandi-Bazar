@@ -1,0 +1,54 @@
+.form{
+    padding: 5%;
+    background-color: white;
+    border: 2px solid gray; 
+    border-radius: 20px;
+}
+
+.form p{
+    color: black; 
+    font-size: 20px
+    !important
+}
+
+.form h1{
+    font-size: 30px;
+}
+
+form{
+    color: black;
+    padding: 5%;
+    border: 2px solid rgb(211, 204, 204);
+    border-radius: 3%;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.form{
+    margin-top: 8%;
+}
+
+.form .block{
+    margin-bottom: 70px;
+}
+
+
+.form-btn{
+    margin-top: 5%;
+}
+
+
+.kisan-logo{
+    margin-top: 5%;
+}
+
+@media print{
+    .kisan-logo{
+        display: none;
+    }
+
+    header{
+        display: none;
+    }
+}
+

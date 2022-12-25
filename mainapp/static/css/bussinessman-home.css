@@ -1,0 +1,147 @@
+.bidding-board{
+    /* background-image: url(/Images/farmer-dashboard-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: darkblue;
+    height: 1%;
+    padding: 2%;
+}
+
+.bidding-board h1 {
+    font-size: 40px; 
+    text-align: center; 
+    color: white;
+}
+
+.bidding-board .options{
+    margin-top: 4%;
+    margin-right: 10%;
+    margin-left: -4%;
+    margin-bottom: -200px;
+}
+
+.bidding-board .option-box{
+    width: 200px;
+    height: 250px;
+    margin-bottom:6%;
+}
+
+.bidding-board .options .option{
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   width: 250px;
+   height: 200px;
+   padding: 3%;
+   transition: all 1s ease-in-out;
+}
+
+.bid-option p{
+    background-color: white;
+    color: white;
+    display: block;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 64% -2% 0 -2.2%;
+    color: rgb(53, 102, 70);
+    font-size: 25px;
+    font-weight: bolder;
+
+}
+
+
+.options .option i{
+    font-size: 60px;
+    color: darkgreen;
+}
+
+
+.row{
+    padding-bottom: 10%;
+}
+
+
+
+/* use of some farmer css */
+.farmer-dashboard{
+    /* background-image: url(/Images/farmer-dashboard-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: white;
+    height: 700px;
+    padding: 2%;
+    
+}
+
+.farmer-dashboard h1 {
+    font-size: 40px; 
+    text-align: center; 
+    color: white;
+}
+
+.options{
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+.option-box{
+    width: 300px;
+    height: 250px;
+    margin-left: 200px;
+    margin-bottom:2%;
+}
+
+.options .option{
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   width: 250px;
+   height: 200px;
+   padding: 3%;
+   transition: all 1s ease-in-out;
+}
+
+
+.options .option:hover{
+    transform: scale(1.1);
+    box-shadow: 15px 15px 15px -15px #111;
+    cursor: pointer;
+}
+
+
+
+
+
+.options .option p{
+    color: rgb(53, 102, 70);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.options .option i{
+    font-size: 60px;
+    color: darkgreen;
+}
+
+
+.news-box{
+    border: 2px solid rgb(218, 215, 215); 
+    overflow: scroll;
+    background-color: white;
+    height: 500px;
+}
+
+
+#navlink1, #navlink4{
+    width:105px;
+  }
+
+#navlink2{
+  width: 157px
+}
+
+
+
+
+
+

@@ -1,0 +1,282 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <label for="product">Product name</label>
+        <input type="text" id="product" name='product_name' required> <br><br>
+        
+        <label for="subtype">Product subtype</label>
+        <input type="text" id="subtype" name="subtype" > <br><br>
+        
+        <label for="Quantity">Quantity (KG)</label>
+        <input type="number" id="Quantity" name="quantity" required> <br> <br>
+  
+        <label for="district">District (product)</label>
+        <input type="text" id="district" name="district" > <br><br>
+        
+        <label for="base_price">Base Price (INR per KG)</label>
+        <input type="number" id="base_price" name="base_price" > <br><br>
+
+        <label for="describe">Product Description</label> <br>
+        <textarea name="description" id="describe" cols="30" rows="3"></textarea> <br><br>
+
+        <label for="image1">product image1</label>
+        <input type="file" id="image1" name="image1" required> <br> <br>
+
+        <label for="image2">product image2</label>
+        <input type="file" id="image2" name="image2" required> <br> <br>
+
+        <label for="video">product video</label>
+        <input type="file" id="video" name='video' required> <br> <br>
+
+        <input type="submit" value='upload'>
+    </form>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Product</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1-SynsFtan0_5WRnMXOGaMMMYGX-4qnUo"> -->
+   
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/add-product.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header.css'%}">
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+
+  
+
+  </head>
+  <body>
+    <div class="intro" >
+      <header id="header">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div style="min-width: 160px;">
+            <a class="navbar-brand" href="#"><img id="navlogo" src="{% static '/Images/logo.png' %}"
+              /></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink1"  href="{% url 'product_form' %}" style="color: white;">Sell Grains</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink2"  href="{% url 'transaction_history' %}" style="color: white;">Transaction History</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink3"  href="{% url 'farmer_analytics' %}" style="color: white;">Analytics</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink4"  href="{% url 'contact_us' %}" style="color: white;">Contact us</a>
+              </li>
+              
+          </ul>
+    
+            <div class="d-flex" style="min-width: 400px; text-decoration: none; list-style: none;">
+              <li class="dropdown">
+                <div href="#" class="dropbtn nav-link" style="color: white;">
+                  <a href="{% url 'farmer_complete_profile' %}"> <button
+              id="btn btn-light btn-ls signup-btn"
+              class="btn btn-danger btn-outline-success "
+              data-bs-toggle="modal"
+              style="font-size: 18px;font-weight: bold; margin-left: -20px; color: white;">
+              Complete Profile
+                  </button></a>
+              </div>
+              </li>
+          </div>
+          </div>
+        </nav>
+      </div>
+      </header>
+      
+    
+        <div class="container">
+            <!-- row 1st -->
+              <div class="row" id="intro-div">
+                <div class="col-sm form">
+                    <h1 style="font-size: 40px; color: blue;">Fill the Product Details</h1>
+                    <form method="POST" enctype="multipart/form-data" >
+                              {% csrf_token %}
+
+                        <div class="form-row d-flex">
+                          <div class="form-group col-sm-6 pe-4">
+                            <label class="form-label" for="product-name" style="font-weight: bold;">Product Name</label>
+                            <input type="text"  class="form-control" id="product-name" name='product_name' required>
+                          </div>
+                          <div class="form-group col-sm-6 ps-4">
+                            <label class="form-label" for="subtype" style="font-weight: bold;">Product Subtype (Optional)</label>
+                            <input type="text"  class="form-control"  id="subtype" name="subtype">
+                            <!-- <select class="form-control" id="subtype">
+                              <option selected>Choose...</option>
+                            </select> -->
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="district" style="font-weight: bold;">District (Product)</label>
+                          <select class="form-control" id="district"  name="district">
+                            <option selected>Choose...</option>
+                            <option value="Jabalpur">Jabalpur</option>
+                            <option value="Indore">Indore</option>
+                            <option value="Bhopal">Bhopal</option>
+                            <option value="Gwalior">Gwalior</option>
+                            <option value="Dewas">Dewas</option>
+                            <option value="Ratlam">Ratlam</option>
+                            <option value="Singrauli">Singrauli</option>
+                            <option value="Jhabua">Jhabua</option>
+                            <option value="Mandsaur">Mandsaur</option>
+                            <option value="Neemach">Neemach</option>
+                          </select>
+                        </div>
+                        <div class="form-row d-flex">
+                          <div class="form-group col-sm-6 pe-4">
+                            <label class="form-label" for="quantity" style="font-weight: bold;">Quantity (in Kg)</label>
+                            <input type="number" name='quantity' class="form-control" id="quantity" required>
+                          </div>
+                          <div class="form-group col-sm-6 pe-4" style="margin-left: 25px;">
+                            <label class="form-label" for="Base" style="font-weight: bold;">Base Price (Rs. per Kg)</label>
+                            <input type="text" class="form-control" id="Base" name="base_price" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label" for="account-holder" style="font-weight: bold;">Product Description (optional)</label>
+                          <textarea type="text" name="description" class="form-control" id="account-holde" rows="6"></textarea>
+                        </div>
+                        <div class="form-row d-flex">
+                            <div>
+                                <label class="form-label" style="font-weight: bold;">Upload Product Images</label>
+                                <div class="form-group col-sm-4 pe-4 d-flex">
+                                    <div class="d-flex">
+                                    <div class="pe-4">
+                                        <input type="file"  accept="image/*" name="image1" id="img-1"  onchange="loadFile1(event)" style="display: none;">
+                                        <img id="output1" style="width: 150px; height: 150px; margin-bottom: 10px;"/><br>
+                                        <label id="img-upload-btn" for="img-1"  style="cursor: pointer;">Upload Image</label>
+                                    </div>
+                                    <div>
+                                        <input type="file"  accept="image/*" name="image2" id="img-2"  onchange="loadFile2(event)" style="display: none;">
+                                        <img id="output2" style="width: 150px; height: 150px; margin-bottom: 10px;"/><br>
+                                        <label id="img-upload-btn" for="img-2"  style="cursor: pointer;">Upload Image</label>
+                                    </div>
+                                    <div class="video-file">
+                                      <label class="form-label" style="font-weight: bold;">Upload Product Video</label>
+                                      <div>
+                                          <input type="file"  accept="video/*" name="video" id="img-3"  onchange="loadFile3(event)" style="display: none;">
+                                          <img id="output3"style="width: 250px; height: 150px; margin-bottom: 10px;"/><br>
+                                          <label id="img-upload-btn" for="img-3"  style="cursor: pointer;">Upload Video</label>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            </div>
+                      
+                            <!-- style="width: 250px; height: 150px; margin-bottom: 10px;" -->
+                        </div>
+                        <div class="form-btn w-100">
+                          <button id="submit-btn" type="submit" value="Login" class="btn btn-lg w-75 btn-block" style="background-color: blue; color: white">Complete</button>
+                        </div>
+                    </form>  
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="footer footer-bg">
+      <footer class="container">
+        <div class="row row-1st">
+          <div class="col-sm">
+            <!-- <a class="navbar-brand" href="/Templates/index.html"><img style="width: 100px; height: 50px;" id="navlogo" src="../Images/logo.png"/></a> -->
+            <h6>Address</h6>
+            <div class="short-intro">
+              <p>MOG Lines, <br>Shri Vaishnav Polytechnic College Campus</p>
+            </div>
+            
+            <div class="icons">
+              <i class="bi bi-facebook social-icons" style="margin-left: 0"></i>
+              <i class="bi bi-instagram social-icons"></i>
+              <i class="bi bi-twitter social-icons"></i>
+              <i class="bi bi-youtube social-icons"></i>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Let's Become Better Together</h6>
+            <div class="short-intro">
+              <b>Learn. Innovate. Inspire</b><br>
+              <p>A Powerfull step towards Digital Farming by using "Mandi Bazar'</p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Quick Pages</h6>
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'our_company' %}">Our Company</a></li>
+              <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              <li><a href="{% url 'disclaimer' %}">Disclaimer</a></li>
+              <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Services</h6>
+            <ul>
+              <li><a href="{% url 'pricing' %}">Pricing</a></li>
+              <li><a href="{% url 'market_rates' %}">Market rates</a></li>
+              <li><a href="{% url 'farmer_analytics' %}">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Referral Sites</h6>
+            <ul>
+              <li><a href="https://www.krishinetwork.com/" target='blank'>Krishi Network</a></li>
+              <li><a href="http://agriretailers.com/" target='blank'>Agri Retailer</a></li>
+              <li><a href="https://farmer.gov.in/" target='blank'>Farmer's Portal</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <script src="{% static '/JS/add-product.js' %}"></script>
+
+  </body>
+  </html>

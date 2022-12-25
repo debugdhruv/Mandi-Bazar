@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Page</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1-SynsFtan0_5WRnMXOGaMMMYGX-4qnUo"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" href="{% static '/css/pricing.css' %}">
+
+  
+
+  </head>
+  <body>
+    <div class="intro">
+      <header id="header">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div style="min-width: 160px;">
+            <a class="navbar-brand" href="{% url 'index' %}"><img id="navlogo" src="{% static '/Images/logo.png' %}"/></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="dropdown nav-item">
+                  <a href="#" class="dropbtn nav-link" id="navlink1" style="color: white;">Products</a>
+                  <div class=" container dropdown-content rounded" style="width: 600px; color: black;">
+                    <div class="row" >
+                      <div class="col-sm">
+                        <ul style="list-style: none;">
+                          <li><a href="{% url 'product_form' %}">Sell Grains</a>
+                          <p>Sale your Products with Suitable Price</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm">
+                        <ul style="list-style: none;">
+                          <li><a href="{% url 'businessman_home' %}">Buy Grains</a>
+                          <p>Buy your Products with Suitable Price</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm" >
+                        <ul style="list-style: none;">
+                          <li><a href="{% url 'farmer_analytics'%}">Analytics</a>
+                          <p>Download Analytics Report in PDF Formate</p>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link navlink" id="navlink2"  href="{% url 'market_rates' %}" style="color: white;">Market Rates</a>
+                </li>
+  
+                <li class="dropdown nav-item">
+                  <a href="#" class="dropbtn nav-link" id="navlink3" style="color: white;">About</a>
+                  <div class="dropdown-content rounded" style="width: 400px;">
+                    
+                      <div class="row">
+                        <div class="col-sm">
+                          <ul style="list-style: none;">
+                            <li><a href="{% url 'our_company' %}">Our Comapny</a>
+                              <p>See details about company & Develoment team</p>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm">
+                          <ul style="list-style: none;">
+                            <li><a href="{% url 'contact_us' %}">Contact us</a>
+                              <p>We will try to response you as soon as possible</p>
+                            </li>
+                          </ul>
+                        </div>
+                    </div> 
+                  </div>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link navlink" id="navlink4"  href="{% url 'pricing' %}" style="color: white;">Pricing</a>
+                </li>
+                
+            </ul>
+    
+            <div class="d-flex" style="min-width: 400px; text-decoration: none; list-style: none;">
+              <li class="dropdown">
+                <div  class="dropbtn nav-link" style="color: white;">
+                  <button
+                  
+                  class="btn btn-primary btn-outline-light"
+                  style="font-size: 18px; font-weight: bold;">
+                  Login
+                </button>
+              </div>
+              <div class="dropdown-content btn-menu btn-menu1 rounded" style="width: 235px;">
+                    
+                <div class="row">
+                  <div class="col-sm mb-lg-4" style="margin-top: 2%;">
+                    <ul style="list-style: none;">
+                      <li data-bs-toggle="modal"><a href="{% url 'farmer-login' %}">Farmer</a></li>
+                      <li  data-bs-toggle="modal"><a href="{% url 'businessman-login' %}">Businessman</a></li>
+                    </ul>
+                  </div>
+              </div> 
+            </div>
+              </li>
+  
+          
+                <li class="dropdown">
+                  <div href="#" class="dropbtn nav-link" style="color: white;">
+                    <button
+                id="btn btn-light btn-ls signup-btn"
+                class="btn btn-danger btn-outline-success"
+                style="font-size: 18px;font-weight: bold; margin-left: -35px; color: white;">
+                Sign Up
+                    </button>
+                </div>
+                  <div class="dropdown-content btn-menu rounded" style="width: 235px;">
+                    
+                      <div class="row">
+                        <div class="col-sm " style="margin-top: 2%;">
+                          <ul style="list-style: none;">
+                            <li data-bs-toggle="modal"><a href="{% url 'farmer-signup' %}">Farmer</a></li>
+                            <li  data-bs-toggle="modal"><a href="{% url 'businessman-signup' %}">Businessman</a></li>
+                          </ul>
+                        </div>
+                    </div> 
+                  </div>
+                </li>
+          </div>
+          </div>
+        </nav>
+        </div>
+      </header>
+
+      <div>
+        <div class="container" style="margin-bottom: -300px; margin-top: -50px;">
+            <!-- row 1st -->
+              <div class="row" id="intro-div" style="text-align: center; padding: 200px;">
+                <div class="col-sm">
+                  <h1 style="font-size: 40px;">Pricing</h1>
+                  <h1>Annual plans to fit your unique needs</h1>
+                  <p>Get a quote for better control for all your Transaction, with standard features.</p>
+                  <br><br><br><br>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="container print-view">
+        <!-- row 1st -->
+          <div class="row form m-lg-4" style="border: 2px solid gray;">
+              <div class="col-sm w-70">
+                <table class="table  table-hover">
+                  <thead>
+                      <th>Anual Transaction value (Rs)</th>
+                      <th>Price (Rs)</th>
+                  </thead>
+                  <tbody>
+                        <tr>
+                          <th>0-1L</th>
+                          <td>1000</td>
+                        </tr>
+                        <tr>
+                          <th>1L - 2L</th>
+                          <td>2000</td>
+                        </tr>
+                        <tr>
+                          <th>3L - 5L</th>
+                          <td>4000</td>
+                        </tr>
+                        <tr>
+                          <th>5L - 10L</th>
+                          <td>8000</td>
+                        </tr>
+                        <tr>
+                          <th>10L - 20L</th>
+                          <td>10000</td>
+                        </tr>
+                        <tr>
+                          <th>20L - 50L</th>
+                          <td>12000</td>
+                        </tr>
+                        <tr>
+                          <th>50L - 1Cr</th>
+                          <td>15000</td>
+                        </tr>
+                  </tbody>
+                </table>
+                <div class="form-btn w-30" >
+                  <button type="submit button" onclick="window.print()" class="btn btn-bg btn-primary w-50 btn-block">Download</button>
+                </div>
+              </div>
+              <div class="col-sm w-50 kisan-logo">
+                <img src="{% static '/Images/kisan.png' %}" alt="" style="height: 300px; margin-left: 30%;">
+              </div>
+          </div>
+    </div>
+        
+    </div>
+
+
+    <div class="footer footer-bg">
+      <footer class="container">
+        <div class="row row-1st">
+          <div class="col-sm">
+            <!-- <a class="navbar-brand" href="/Templates/index.html"><img style="width: 100px; height: 50px;" id="navlogo" src="../Images/logo.png"/></a> -->
+            <h6>Address</h6>
+            <div class="short-intro">
+              <p>MOG Lines, <br>Shri Vaishnav Polytechnic College Campus</p>
+            </div>
+            
+            <div class="icons">
+              <i class="bi bi-facebook social-icons" style="margin-left: 0"></i>
+              <i class="bi bi-instagram social-icons"></i>
+              <i class="bi bi-twitter social-icons"></i>
+              <i class="bi bi-youtube social-icons"></i>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Let's Become Better Together</h6>
+            <div class="short-intro">
+              <b>Learn. Innovate. Inspire</b><br>
+              <p>A Powerfull step towards Digital Farming by using "Mandi Bazar'</p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Quick Pages</h6>
+            <ul>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'our_company' %}">Our Company</a></li>
+              <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+              <li><a href="{% url 'disclaimer' %}">Disclaimer</a></li>
+              <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Services</h6>
+            <ul>
+              <li><a href="{% url 'pricing' %}">Pricing</a></li>
+              <li><a href="{% url 'market_rates' %}">Market rates</a></li>
+              <li><a href="{% url 'farmer_analytics' %}">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Referral Sites</h6>
+            <ul>
+              <li><a href="https://www.krishinetwork.com/" target='blank'>Krishi Network</a></li>
+              <li><a href="http://agriretailers.com/" target='blank'>Agri Retailer</a></li>
+              <li><a href="https://farmer.gov.in/" target='blank'>Farmer's Portal</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="{% static '/JS/index.js' %}"></script>
+  </body>
+  </html>

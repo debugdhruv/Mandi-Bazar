@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Page</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1-SynsFtan0_5WRnMXOGaMMMYGX-4qnUo"> -->
+   {% load static %}
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" href="{% static '/css/farmer_analytics.css' %}">
+
+  
+
+  </head>
+  <body>
+    <div class="intro">
+      <header id="header">
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div style="min-width: 160px;">
+            <a class="navbar-brand" href="#"><img id="navlogo" src="{% static '/Images/logo.png' %}"
+              /></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink1"  href="{% url 'product_form' %}" style="color: white;">Sell Grains</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink2"  href="{% url 'transaction_history' %}" style="color: white;">Transaction History</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink3"  href="{% url 'farmer_analytics' %}" style="color: white;">Analytics</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link navlink" id="navlink4"  href="{% url 'contact_us' %}" style="color: white;">Contact us</a>
+              </li>
+              
+          </ul>
+    
+            <div class="d-flex" style="min-width: 400px; text-decoration: none; list-style: none;">
+              <li class="dropdown">
+                <div href="#" class="dropbtn nav-link" style="color: white;">
+                  <a href="{% url 'farmer_complete_profile' %}"> <button
+              id="btn btn-light btn-ls signup-btn"
+              class="btn btn-danger btn-outline-success "
+              data-bs-toggle="modal"
+              style="font-size: 18px;font-weight: bold; margin-left: -20px; color: white;">
+              Complete Profile
+                  </button></a>
+              </div>
+              </li>
+          </div>
+          </div>
+        </nav>
+      </div>
+      </header>
+      
+    
+        <div class="container">
+            <!-- row 1st -->
+              <div class="row">
+                <form class="col-sm form">
+                    <h1 style="font-size: 40px; color: white;">Analytics</h1>
+                    <p style="text-align: center;">Download your Past Analytics Report Here</p>
+                    <div class="container flex" style="color: black;">
+                        <table class="table table-borderless">
+                            
+                            <tbody>
+                                  <tr>
+                                    <th>Last 5 years Analysis:</th>
+                                    <td><button class="btn btn-danger">Download</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>Last 1 year Analysis:</th>
+                                    <td><button class="btn btn-danger">Download</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>Last 30 Days Analysis:</th>
+                                    <td><button class="btn btn-danger">Download</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>Average Transaction Value:</th>
+                                    <td><button class="btn btn-danger">Download</button></td>
+                                  </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </form>
+              </div>
+        </div>
+    </div>
+
+    <div class="footer footer-bg">
+      <footer class="container">
+        <div class="row row-1st">
+          <div class="col-sm">
+            <!-- <a class="navbar-brand" href="/Templates/index.html"><img style="width: 100px; height: 50px;" id="navlogo" src="../Images/logo.png"/></a> -->
+            <h6>Address</h6>
+            <div class="short-intro">
+              <p>MOG Lines, <br>Shri Vaishnav Polytechnic College Campus</p>
+            </div>
+            
+            <div class="icons">
+              <i class="bi bi-facebook social-icons" style="margin-left: 0"></i>
+              <i class="bi bi-instagram social-icons"></i>
+              <i class="bi bi-twitter social-icons"></i>
+              <i class="bi bi-youtube social-icons"></i>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Let's Become Better Together</h6>
+            <div class="short-intro">
+              <b>Learn. Innovate. Inspire</b><br>
+              <p>A Powerfull step towards Digital Farming by using "Mandi Bazar'</p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <h6>Quick Pages</h6>
+            <ul>
+              <li><a href="/Templates/index.html">Home</a></li>
+              <li><a href="/Templates/about-us.html">About us</a></li>
+              <li><a href="/Templates/contact-us.html">contact us</a></li>
+              <li><a href="/Templates/disclaimer.html">Disclaimer</a></li>
+              <li><a href="/Templates/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Services</h6>
+            <ul>
+              <li><a href="/Templates/pricing.html">Pricing</a></li>
+              <li><a href="/Templates/yesterday-market-rates.html">Market rates</a></li>
+              <li><a href="/Templates/analytics.html">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="col-sm">
+            <h6>Referral Sites</h6>
+            <ul>
+              <li><a href="https://www.krishinetwork.com/">Krishi Network</a></li>
+              <li><a href="http://agriretailers.com/">Agri Retailer</a></li>
+              <li><a href="https://farmer.gov.in/">Farmer's Portal</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <script src="{% static '/JS/index.js' %}"></script>
+  </body>
+  </html>

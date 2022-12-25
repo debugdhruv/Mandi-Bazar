@@ -1,0 +1,243 @@
+/* images shadow
+#img-shadow {
+  box-shadow: 0px 15px 10px -15px #111;
+}
+
+
+.row {
+  padding-bottom: 10%;
+}
+
+.side-img-1 {
+  background-image: url(../Images/side-img-1.png);
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+
+
+}
+
+.side-img-2 {
+  background-image: url(../Images/side-img-2.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+
+}
+
+.side-img-3 {
+  background-image: url(../Images/side-img-3.png), url(Images/leaf-1.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: 0px, 80%;
+} */
+
+/* .side-img-3{
+    background-image: ;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+  } */
+
+
+/* #common-div h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+#common-div p {
+  color: grey;
+  font-size: 16px;
+}
+
+#common-div b {
+  font-size: 20px;
+} */
+
+/* #common-div{
+    margin-left: 15%;
+    margin-right: 15%;
+
+  } */
+
+
+/* Process container */
+/* .process h2 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.process p {
+  color: gray;
+  font-size: 16px;
+}
+
+
+
+/* modals */
+/* .modal-dialog {
+  max-width: 600px;
+  max-height: 700px;
+} */ 
+
+
+/* .copyright{
+  text-align: center; 
+  padding: 10px; 
+  background-color: rgb(194, 188, 188); 
+  margin-top: 5.5%;
+  margin-left:-2%;
+  margin-right:-2%;
+  margin-bottom: -2%;
+  height: 90px;
+}
+
+.copyright p{
+  color: black;
+  font-size: 16px;
+}
+
+.copyright a{
+  color: black;
+  text-decoration: none;
+}
+
+.copyright a:hover{
+  color: darkblue;
+}
+
+.copyright ul .a{
+  margin-left: 20px;
+}
+
+.copyright ul{
+  margin-bottom: 1%;
+} */
+
+
+
+
+
+
+
+
+ /* images shadow */
+ #img-shadow{
+  box-shadow: 0px 15px 10px -15px #111;
+}
+
+
+.row{
+  padding-bottom: 10%;
+}
+
+.side-img-1{
+  background-image: url(../Images/side-img-1.png);
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  
+  
+}
+
+.side-img-2{
+  background-image: url(../Images/side-img-2.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  
+}
+
+.side-img-3{
+  background-image: url(../Images/side-img-3.png), url(Images/leaf-1.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: 0px, 80%;
+}
+
+/* .side-img-3{
+  background-image: ;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+} */
+
+
+#common-div h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+#common-div p{ 
+  color: grey;
+  font-size: 16px;
+}
+
+#common-div b{
+  font-size: 20px;
+}
+
+/* #common-div{
+  margin-left: 15%;
+  margin-right: 15%;
+
+} */
+
+
+/* Process container */
+.process h2{
+text-align: center;
+margin-bottom: 3%;
+}
+
+.process p{
+color: gray;
+font-size: 16px;
+}
+
+.process i{
+color: blue; 
+font-size: 70px;
+}
+
+
+
+/* modals */
+.modal-dialog{
+max-width: 600px; 
+max-height: 700px;
+}
+
+
+/* .copyright{
+text-align: center; 
+padding: 10px; 
+background-color: rgb(194, 188, 188); 
+margin-top: 5.5%;
+margin-left:-2%;
+margin-right:-2%;
+margin-bottom: -2%;
+height: 90px;
+}
+
+.copyright p{
+color: black;
+font-size: 16px;
+}
+
+.copyright a{
+color: black;
+text-decoration: none;
+}
+
+.copyright a:hover{
+color: darkblue;
+}
+
+.copyright ul .a{
+margin-left: 20px;
+}
+
+.copyright ul{
+margin-bottom: 1%;
+} */
+
+
+
+
+
+

@@ -1,0 +1,466 @@
+/* header {
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.scroll-header {
+  background-color: white;
+  color: black;
+}
+
+.scroll-change-btn {
+  background-color: black;
+}
+
+#navlogo {
+  width: 140px;
+}
+
+.collapse {
+  margin-left: 32.5%;
+}
+
+.collapse li {
+  font-size: 16px;
+  margin-left: 21px;
+}
+
+
+
+/* menu bar toolpit */
+/* .dropdown li a {
+  color: black;
+  font-size: 14px;
+  list-style: none;
+  list-style-position: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+
+.dropdown .dropdown-content::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 7%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+
+
+.dropdown-content {
+  padding-top: 40%;
+  margin-top: 20%;
+  color: black;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+  animation-duration: 0.5s;
+
+} */
+
+
+/* dropdown style */
+/* .dropdown:hover .dropdown-content {
+  display: inline;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+
+  75% {
+    transform: translateY(-5px)
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.btn-menu {
+  padding: 0;
+  height: 100px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.dropdown .btn-menu::after {
+  left: 25%;
+}
+
+.dropdown-content .row li {
+  padding: 5px;
+}
+
+.dropdown-content .row a {
+  padding-left: 5px;
+  color: black;
+}
+
+
+.dropdown-content .row a:hover {
+  border-left: 5px solid blue;
+}
+
+
+
+.btn-menu li {
+  padding: 6%;
+  color: black;
+  text-align: left;
+  border-radius: 2%;
+}
+
+.btn-menu li {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.btn-menu a {
+  padding: 10px;
+}
+
+.btn-menu a:hover {
+  color: blue;
+}
+
+
+.form-title {
+  margin: -2rem 0rem 2rem;
+  background-color: white;
+}
+
+
+.delimiter {
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+}
+
+.form-btn {
+  text-align: center;
+}
+
+.form-btn .btn {
+  border-radius: 40px;
+  margin-top: 30px;
+}
+
+.form-btn p a {
+  font-size: 16px;
+  color: black;
+  font-weight: bolder;
+}
+
+.form-btn p a:hover {
+  color: #074d32;
+}
+
+
+/* header nav intro close */
+
+
+/* background Image */
+/* https://drive.google.com/uc?export=view&id=1EgcCUEXnyWtOOm73-nAJlLSA0dMywqAk */
+/* .intro {
+  /* background-image: url("/static/Images/background.jpg"); */
+  /* background-image: url("/static/Images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+}
+
+
+#intro-div {
+  color: white;
+
+}
+
+#intro-div #part1 {
+  margin-top: 8%;
+}
+
+
+
+#intro-div h1:first-of-type,
+p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+
+#intro-div h1:nth-of-type(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+#intro-div button {
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+#intro-div img {
+  width: 480px;
+  height: 500px;
+}
+
+.navbar li a {
+  color: white;
+} */
+
+
+
+
+
+
+
+
+
+
+
+header{
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
+
+.scroll-header{
+background-color: white;
+color: black;
+}
+
+.scroll-change-btn{
+background-color: black;
+}
+
+#navlogo{
+  width: 140px;
+}
+
+.collapse {
+  margin-left: 39.5%;
+}
+
+
+.collapse li {
+font-size: 16px;
+margin-left: 21px;
+}
+
+#navlink2{
+width: 115px;
+}
+
+
+
+/* menu bar toolpit */
+.dropdown .dropdown-content::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 7%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+
+
+.dropdown-content {
+  padding-top: 25%;
+  padding-bottom: 30%;
+  margin-top: 5%;
+  color: black;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  animation-duration: 0.5s;
+  height: 140px;
+  padding-right: 40px;
+}
+
+
+/* dropdown style */
+.dropdown:hover .dropdown-content {
+  display: inline;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-2 {
+  0%   { transform: translateY(0)}
+  50%  { transform: translateY(-10px)}
+  75%  { transform: translateY(-5px)}
+  100% { transform: translateY(0px); }
+}
+
+
+.btn-menu{
+padding: 0;
+height: 100px;
+padding-top: 10%;
+padding-bottom: 10%;
+
+}
+
+.dropdown .btn-menu::after{
+left: 10%;
+}
+
+.dropdown .btn-menu1::after{
+left: 22%;
+}
+
+
+.dropdown-content .row li a{
+color: black;
+font-weight: bold;
+font-size: 16px;
+text-decoration: none;
+}
+
+.dropdown-content .row li p{
+color: gray;
+font-size: 13px;
+}
+
+.dropdown-content .row li{
+font-size: 14px;
+padding-left: 10px;
+}
+
+
+.dropdown-content .row li:hover{
+border-left: 3px solid red;
+padding-left: 7px;
+}
+
+
+
+
+.btn-menu li{
+margin-bottom: 15px;
+}
+
+
+.form-title {
+margin: -2rem 0rem 2rem;
+background-color: white;
+}
+
+
+.delimiter {
+padding: 1rem;  
+}
+
+.form-group{
+margin-bottom: 20px;
+
+}
+
+.form-btn{
+text-align: center;
+}
+
+.form-btn .btn{
+border-radius: 40px;
+margin-top: 30px;
+}
+
+.form-btn p a{
+font-size: 16px;
+color: black;
+font-weight: bolder;
+}
+
+.form-btn p a:hover{
+color: #074d32;
+}
+
+
+/* header nav intro close */
+
+
+/* background Image */
+/* https://drive.google.com/uc?export=view&id=1EgcCUEXnyWtOOm73-nAJlLSA0dMywqAk */
+.intro{
+  background-image: url("/static/Images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+}
+
+
+#intro-div {
+  color: white;
+  
+}
+
+#intro-div #part1{
+  margin-top: 8%;
+}
+
+
+
+#intro-div h1:first-of-type, p{
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+
+#intro-div h1:nth-of-type(2){
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+#intro-div button{
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+#intro-div img{
+  width: 480px;
+  height: 500px;    
+}
+
+.navbar li a{
+  color: white;
+}

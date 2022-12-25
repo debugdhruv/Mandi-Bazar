@@ -1,0 +1,97 @@
+.form{
+    background-color: white;
+    border: 2px solid gray; 
+    border-radius: 20px;
+    
+}
+
+.form p{
+    color: black; 
+    font-size: 20px
+    !important
+}
+
+.form h1{
+    font-size: 30px;
+}
+
+form{
+    color: black;
+    padding: 5%;
+    border: 2px solid rgb(211, 204, 204);
+    border-radius: 3%;
+    margin-top: 40px;
+    background-color: white;
+    width: 90%;
+}
+
+.form{
+    margin-top: 8%;
+}
+
+.form .block{
+    margin-bottom: 70px;
+}
+
+
+.form-btn{
+    margin-top: 5%;
+}
+
+
+.row{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.kisan-logo{
+    margin-top: 5%;
+}
+
+@media print{
+    .kisan-logo{
+        display: none;
+    }
+
+    header{
+        display: none;
+    }
+}
+
+.panda-page{
+    background-image: url(/static/Images/about-intro-panda.jpeg); 
+    border-radius: 10px; 
+    height: 400px; 
+    padding-top: 70px; 
+    box-shadow: -10px 15px 15px -15px #111;
+  }
+
+.small-box{
+    width: 400px; 
+    height: 250px; 
+    background-color: white; 
+    border-top: 4px solid red; 
+    border-radius: 10px; 
+    padding: 2%; 
+    margin-left: -100px; 
+    box-shadow: -15px 15px 15px -10px #111;
+}
+
+
+#img-shadow{
+    border-radius: 70%;
+}
+
+.our-team{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 350px; 
+    background-color: white; 
+    border-top: 4px solid red; 
+    border-radius: 10px; 
+    padding: 2%;
+    border-bottom: 2px solid gray; 
+    border-right: 2px solid gray;  
+    box-shadow: -15px 15px 15px -10px #111;
+}
+

@@ -1,0 +1,41 @@
+.form{
+    padding: 5%;
+    background-color: transparent;
+    border-radius: 3%;
+}
+
+.form h1{
+    text-align: center;
+}
+
+form{
+    color: black;
+    padding: 5%;
+    border: 2px solid rgb(211, 204, 204);
+    border-radius: 3%;
+    box-shadow: 15px 15px 15px -10px #111;
+    background-color: white;
+    width: 600px;
+
+}
+
+
+.form{
+    margin-top: 4%;
+}
+
+.modal-footer a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.modal-footer a:hover{
+    color: blue;
+}
+
+.copyright{
+    margin-top: -2.1%;
+  }
+
+

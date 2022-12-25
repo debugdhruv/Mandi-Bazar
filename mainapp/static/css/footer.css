@@ -1,0 +1,190 @@
+/* footer style
+.footer-bg {
+  background-image: url('/static/Images/footer-bg.png');
+}
+
+.footer {
+  background-color: darkblue;
+  color: white;
+  padding: 2%;
+}
+
+footer h6 {
+  margin-bottom: 10px;
+}
+
+footer .col-sm {
+  margin-left: 3%;
+}
+
+.footer .social-icons i {
+  margin-left: 10%;
+}
+
+.icons {
+  margin-top: 10px;
+  color: rgb(212, 203, 203);
+}
+
+.social-icons {
+  margin-left: 10px;
+}
+
+.social-icons:hover {
+  color: white;
+}
+
+footer ul,
+footer a,
+footer p {
+  color: rgb(212, 203, 203);
+  font-size: 14px;
+  list-style: none;
+  list-style-position: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+*/
+
+/* copyright Section */
+/* .copyright {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(194, 188, 188);
+  margin-top: 5.5%;
+  margin-left: -2%;
+  margin-right: -2%;
+  margin-bottom: -2%;
+  height: 90px;
+}
+
+.copyright p {
+  color: black;
+  font-size: 16px;
+}
+
+.copyright a {
+  color: black;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: darkblue;
+}
+
+.copyright ul .a {
+  margin-left: 20px;
+}
+
+.copyright ul {
+  margin-bottom: 1%;
+}   */
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer style */
+.footer-bg{
+  background-image: url(/static/Images/footer-bg.png);
+  background-size: 1200px;
+}
+
+.footer{
+  background-color: darkblue;
+  color: white;
+  padding: 2%;
+  height: 400px;
+
+}
+
+footer h6{
+  margin-bottom: 10px;
+}
+
+
+
+footer .col-sm{
+  margin-left: 3%;
+}
+
+.footer .social-icons i{
+  margin-left: 10%;
+}
+
+.icons{
+  margin-top: 10px;
+  color: rgb(212, 203, 203);
+}
+
+.social-icons{
+  margin-left: 10px;
+}
+
+.social-icons:hover{
+  color: white;
+}
+
+footer ul, footer a, footer .short-intro b,  .short-intro p{
+  color: rgb(212, 203, 203);
+  font-size: 14px;
+  list-style: none;
+  list-style-position: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: white;
+}
+
+
+
+/* copyright Section */
+.copyright{
+  text-align: center; 
+  padding: 15px; 
+  background-color: rgb(251, 251, 255); 
+  margin-top: 5.5%;
+  margin-left:-2%;
+  margin-right:-2%;
+  margin-bottom: -2%;
+  height: 50px;
+  
+}
+
+.copyright p{
+  color: black;
+  font-size: 16px;
+}
+
+.copyright a{
+  color: black;
+  text-decoration: none;
+}
+
+.copyright a:hover{
+  color: darkblue;
+}
+
+.copyright ul .a{
+  margin-left: 20px;
+}
+
+.copyright ul{
+  margin-bottom: 1%;
+}

@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(228, 230, 228);
+    font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+    color: rgb(223, 154, 27);
+    font-size: 48px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 425px;
+    width: 450px;
+    height: 500px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.form>label {
+    margin: 40px 0 5px 73px;
+}
+
+.input {
+    font-size: medium;
+    width: 300px;
+    margin-left: 70px;
+    height: 27px;
+    padding: 5px;
+    outline: none;
+}
+
+.form>select {
+    font-size: larger;
+    height: 45px;
+    width: 315px;
+    margin-left: 65px;
+    outline: none;
+}
+
+
+.div {
+    margin: 40px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a {
+    text-decoration: none;
+    font-size: larger;
+    padding: 6px 20px;
+    background-color: rgb(70, 68, 68);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.a:hover {
+    color: white;
+    background-color: rgb(48, 47, 47);
+}
+
+.a a {
+    color: white;
+    text-decoration: none;
+}
+
+form>p {
+    margin-left: 160px;
+}

@@ -1,0 +1,100 @@
+.farmer-dashboard{
+    /* background-image: url(/Images/farmer-dashboard-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: darkblue;
+    height: 700px;
+    padding: 2%;
+    
+}
+
+.farmer-dashboard h1 {
+    font-size: 40px; 
+    text-align: center; 
+    color: white;
+}
+
+.options{
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+.option-box{
+    width: 300px;
+    height: 250px;
+    margin-left: 200px;
+    margin-bottom:2%;
+}
+
+.options .option{
+   background-color: white;
+   border-radius: 10px;
+   text-align: center;
+   width: 250px;
+   height: 200px;
+   padding: 3%;
+   transition: all 1s ease-in-out;
+   
+}
+
+
+.options .option:hover{
+    transform: scale(1.1);
+    
+    z-index: -1;
+    box-shadow: 15px 15px 15px -15px #111;
+    cursor: pointer;
+}
+
+
+
+
+
+.options .option p{
+    color: rgb(53, 102, 70);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.options .option i{
+    font-size: 60px;
+    color: darkgreen;
+}
+
+
+/* .news-box{
+    border: 2px solid rgb(218, 215, 215); 
+    overflow: scroll;
+    background-color: white;
+    height: 500px;
+} */
+
+
+.row{
+    padding-bottom: 10%;
+  }
+
+
+  .dropdown .dropdown-content::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+
+
+  #navlink1, #navlink4{
+    width:105px;
+  }
+
+#navlink2{
+  width: 157px
+}
+
+
+
+
