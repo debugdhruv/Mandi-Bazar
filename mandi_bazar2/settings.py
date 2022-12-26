@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ud(s3925_@n%0(_3^!7_!24-uw48@0+z=!6i_=*r@$3rrxkbdx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
 
 
 # Application definition
@@ -119,7 +119,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images/') 
 
@@ -137,3 +136,7 @@ EMAIL_HOST_PASSWORD = 'cway alyh xizj nzpv'
 INTERNAL_IPS = [
     "127.0.0.1"
 ]
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
