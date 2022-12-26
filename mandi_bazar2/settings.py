@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ud(s3925_@n%0(_3^!7_!24-uw48@0+z=!6i_=*r@$3rrxkbdx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mandibazar.netlify.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
