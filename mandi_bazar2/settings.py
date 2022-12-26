@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ud(s3925_@n%0(_3^!7_!24-uw48@0+z=!6i_=*r@$3rrxkbdx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
+ALLOWED_HOSTS = ['mandibazar.netlify.app']
 
 
 # Application definition
@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'mandi_bazar2.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -138,6 +138,3 @@ INTERNAL_IPS = [
     "127.0.0.1"
 ]
 
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'mainapp/static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
